@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyesRelax;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,17 @@ namespace EyesRelaxUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        internal Process Process { get; }
+
         public MainWindow()
         {
+            Settings settings = new()
+            { 
+                MainTimerTime = 1500000  //таймер на 25 хв
+            };
+
+            Process = new Process(settings);
+
             InitializeComponent();
         }
     }
