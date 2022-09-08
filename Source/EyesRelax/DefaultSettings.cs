@@ -6,25 +6,21 @@ using System.Threading.Tasks;
 
 namespace EyesRelax
 {
-    public class DefaultSettings
+    public class DefaultSettings : Settings
     {
         protected TimeSpan workingTimeMinutes = new TimeSpan(0, 25, 0);
-        protected int workingTime;
-        public int WorkingTime { get => workingTime = (int)workingTimeMinutes.TotalMinutes; }
+        public new uint WorkingTime => (uint)workingTimeMinutes.TotalMinutes;
 
         protected TimeSpan smallBreakMinutes = new TimeSpan(0, 5, 0);
-        protected int smallBreak;
-        public int SmallBreak { get => smallBreak = (int)smallBreakMinutes.TotalMinutes; }
+        public new uint SmallBreak => (uint)smallBreakMinutes.TotalMinutes;
 
-        protected TimeSpan longBreakMinutes = new TimeSpan(0, 20, 0);
-        protected int longBreak;
-        public int LongBreak { get => longBreak = (int)longBreakMinutes.TotalMinutes; }
+        protected TimeSpan longBreakMinutes = new TimeSpan(0, 30, 0);
+        public new uint LongBreak => (uint)longBreakMinutes.TotalMinutes;
 
-        protected static int longBreakCounter;
-        public static int LongBreakCounter { get => longBreakCounter = 0; }
-
-        protected bool overallWorkingTime;
-        public bool OverallWorkingTime { get => overallWorkingTime = true; }
+        protected TimeSpan overallWorkingTime = new TimeSpan(9, 0, 0);
+        public new uint OverallWorkingTime => (uint)overallWorkingTime.TotalHours;
+        public new sbyte LongBreakCounter => 0;
+        public new bool ShowOverallWorkingTime => true;
 
     }
 }

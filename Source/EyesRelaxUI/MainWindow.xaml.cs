@@ -25,7 +25,7 @@ namespace EyesRelaxUI
 
         public MainWindow()
         {
-            Settings settings = new Settings();
+            DefaultSettings settings = new DefaultSettings();
             var x = settings.WorkingTime;
 
             Process = new Process(settings);

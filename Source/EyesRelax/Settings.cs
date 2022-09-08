@@ -2,12 +2,13 @@ using System;
 
 namespace EyesRelax
 {
-    public class Settings : DefaultSettings
+    public abstract class Settings
     {
-        public int WorkingTime { get; set; } //in minutes 
-        public int SmallBrake { get; set; } //in minutes
-        public static sbyte LongBreakCounter { get; set; } //counts long breaks
-        public int LongBreak { get; set; } //in minutes
-        public bool OverallWorkingTime { get; set; } //in hours & minutes
+        public uint WorkingTime { get; set; } //in minutes 
+        public uint SmallBreak { get; set; } //in minutes
+        public sbyte LongBreakCounter { get; set; } //counts long breaks
+        public uint LongBreak { get; set; } //in minutes
+        public uint OverallWorkingTime { get; set; } //in hours
+        public bool ShowOverallWorkingTime { get; set; } //yes or no
     }
 }

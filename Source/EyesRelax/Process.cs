@@ -9,7 +9,7 @@ namespace EyesRelax
 
         public Timer MainTimer { get { return mainTimer; } }
         
-        public Process(Settings settings)
+        public Process(DefaultSettings defaultSettings)
         {
             mainTimer = new Timer();
         }
