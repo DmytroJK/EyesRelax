@@ -25,10 +25,8 @@ namespace EyesRelaxUI
 
         public MainWindow()
         {
-            Settings settings = new()
-            { 
-                MainTimerTime = 1500000  //таймер на 25 хв
-            };
+            DefaultSettings settings = new DefaultSettings();
+            var x = settings.WorkingTime;
 
             Process = new Process(settings);
 

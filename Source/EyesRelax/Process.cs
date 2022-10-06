@@ -1,4 +1,5 @@
-﻿using System.Timers;
+﻿using System;
+using System.Timers;
 
 namespace EyesRelax
 {
@@ -8,9 +9,10 @@ namespace EyesRelax
 
         public Timer MainTimer { get { return mainTimer; } }
         
-        public Process(Settings settings)
+        public Process(DefaultSettings defaultSettings)
         {
-            mainTimer = new Timer(settings.MainTimerTime);
+            mainTimer = new Timer();
         }
+        
     }
 }
